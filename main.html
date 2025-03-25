@@ -5,37 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
     <style>
-        .grid-container {
+        .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            max-width: 600px;
-            margin: 0 auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* Four equal columns */
+            grid-template-rows: auto;
+            gap: 5px;
+            background-color: white;
+            padding: 5px;
         }
-        
-        .grid-item {
-            background-color: #4CAF50;
+
+        .item {
+            background-color: green;
             color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            border: 2px solid white;
         }
+
+        /* Adjust grid item positions */
+        .item1  { grid-column: 1 / 5; } /* Spans all 4 columns */
+        .item2  { grid-row: 2 / 6; grid-column: 1; } /* Vertical span */
+        .item3  { grid-column: 2; }
+        .item4  { grid-column: 3 / 5; } /* Spans 2 columns */
+        .item5  { grid-column: 2; }
+        .item6  { grid-column: 3 / 5; }
+        .item7  { grid-column: 2; }
+        .item8  { grid-column: 3; }
+        .item9  { grid-column: 4; } /* Positioned at the end */
+        .item10 { grid-column: 2 / 5; } /* Spans all 4 columns */
     </style>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
-        <div class="grid-item">10</div>
+
+    <h3>Create the following layout using grid layout:</h3>
+    
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
     </div>
+
 </body>
 </html>
